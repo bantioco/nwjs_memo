@@ -1,0 +1,36 @@
+{
+  "name": "Memo",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "frame": false,
+    "toolbar": true,
+    "transparent": false,
+    "width": 550,
+    "height": 750,
+    "position": "mouse",
+    "min_width": 550,
+    "min_height": 750,
+    "max_width": 550,
+    "max_height": 750,
+    "icon":"icon/h20/icon-original.png"
+  },
+  "resizable": true,
+  "show_in_taskbar": true,
+  "visible_on_all_workspaces": true,
+  "description": "my memos",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@antioco.fr:5943/home/git/desktop-app"
+  },
+  "author": "BANTIOCO",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-extra": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}

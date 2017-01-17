@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Memo</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/desktop-app.css">
+        <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script src="/ckeditor/ckeditor.js"></script>
+    </head>
+    <body>
+        <header id="win_header">
+            <div class="header-drag"></div>
+            <div class="top-nav">
+                <div id="win_close" class="top-nav-close"></div>
+                <div id="win_minimize" class="top-nav-minimize"></div>
+            </div>
+        </header>
+
+        <section id="main" class="main">
+
+            <div id="main_title"></div>
+
+            <div id="login_bloc" class="login-bloc">
+
+                <div id="login_return_ajax"></div>
+
+                <form id="login_form" method="POST" autocomplete="off">
+                    <div class="form-group"><input class="form-control" type="text" id="app_login" placeholder="login"></div>
+                    <div class="form-group"><input class="form-control" type="password" id="app_password" placeholder="password" autocomplete="new-password"></div>
+                    <div class="form-group"><input class="form-control" type="password" id="app_confirm_password" placeholder="confirm password" autocomplete="new-password"></div>
+                    <div><button class="btn btn-default" type="submit">SEND</button></div>
+                </form>
+
+                <div class="bg-icon"><img src="icon/icon-original.png"></div>
+
+            </div>
+
+            <div id="view_content"></div>
+
+        </section>
+
+        <footer id="footer">
+            <div id="footer_date" class="footer-l-date"></div>
+            <div class="footer-r-author">v-0.0.1</div>
+        </footer>
+
+        <script type="text/javascript" src="/js/desktop-app.js"></script>
+        <script type="text/javascript" src="/js/desktop-app-win.js"></script>
+        <script type="text/javascript" src="/js/jquery-desktop-app-win.js"></script>
+    </body>
+</html>

@@ -1,0 +1,466 @@
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abel'), local('Abel-Regular'), url(fonts/Abel.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Abel",sans-serif;
+    color: #343434;
+}
+header{
+    /*-webkit-app-region: drag;*/
+    position:fixed;
+    top: 0; left: 0; right: 0;
+    height: 20px;
+    background-color: #F2F2F2;
+    color: #FFF;
+    z-index: 99;
+}
+.header-drag {
+    float: left;
+    width: 89%;
+    -webkit-app-region: drag;
+    min-height: 20px;
+}
+.bg-icon {
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 30px;
+    right: 10px;
+    z-index: -1;
+    opacity: 0.5;
+    width: 33.33%;
+}
+.bg-icon img {
+    width: 100%;
+}
+.view-bg-icon {
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 25px;
+    right: 10px;
+    z-index: -1;
+    opacity: 0.5;
+    width: 20px;
+}
+.view-bg-icon img {
+    width: 100%;
+}
+footer{
+    position:fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 20px;
+    background-color: #F2F2F2;
+    color: #FFF;
+    z-index: 99;
+}
+.footer-l-date {
+    float: left;
+    font-size: 10px;
+    color: #BABABA;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+.footer-r-author {
+    float: right;
+    font-size: 10px;
+    color: #BABABA;
+    padding-right: 5px;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+
+/*******************************
+    TOP NAV
+*******************************/
+.top-nav {
+    float: right;
+    width: 10%;
+    position: relative;
+    padding-right: 5px;
+    z-index: 999;
+}
+.top-nav-minimize {
+    float: right;
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #e67e22;
+    color: #FFF;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+.top-nav-minimize:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.top-nav-minimize i {
+    padding-top: 5px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.top-nav-maximize {
+    float: right;
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: #FFF;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+.top-nav-maximize:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.top-nav-maximize i {
+    padding-top: 5px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.top-nav-unmaximize {
+    float: right;
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: #FFF;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    z-index: 999;
+    display:none;
+}
+.top-nav-unmaximize:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.top-nav-unmaximize i {
+    padding-top: 5px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.top-nav-close {
+    float: right;
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    color: #FFF;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+.top-nav-close:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.top-nav-close i {
+    padding-top: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+
+.main {
+    /*background-color: #FFF;*/
+    position:relative;
+    margin: 20px 0 20px 0;
+    text-align: center;
+
+    /*border: 1px dotted #F2F2F2;*/
+    border: 0;
+}
+.login-bloc {
+    position: relative;
+    padding: 0 20% 0 20%;
+    margin: 5px;
+    text-align: center;
+}
+
+.sign-in-title, .create-login-title {
+    margin-top: 40%;
+}
+
+.data-content{
+
+}
+.content-topbar-nav {
+    float: left;
+    position: relative;
+    margin: 10px 3px 3px 10px;
+    cursor: pointer;
+}
+.content-topbar-close {
+    position: absolute;
+    right: 19px;
+    top: 12px;
+    cursor: pointer;
+    /*color: #FFF;*/
+}
+.content-topbar-nav:hover {
+    opacity: 0.7;
+}
+.content-topbar-close:hover {
+    opacity: 0.7;
+    color: red;
+}
+
+.content-nav {
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+.content-nav-item {
+    float: left;
+    position: relative;
+    width: 20%;
+    cursor: pointer;
+    font-size: 11px;
+    border: 1px dotted #BABABA;
+}
+.content-nav-item:hover {
+    opacity: 0.7;
+}
+
+.inp-required {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+}
+
+.add-data-bloc, .modify-login-bloc, .search-data-bloc {
+    position: relative;
+    margin: 0 20% 0 20%;
+}
+.add-html-bloc {
+    position: relative;
+    margin: 0 5% 0 5%;
+}
+.export-data-download {
+    position: relative;
+    margin-top: 25%;
+}
+.modify-login-title {
+    position: relative;
+    margin-top: 10%;
+}
+.add-html-title {
+    position: relative;
+    margin-top: 10%;
+}
+.search-data-title {
+    position: relative;
+    margin-top: 10%;
+}
+
+
+.panel-data {
+    position: relative;
+    margin: 10px;
+    text-align: left;
+}
+
+.panel-data:first-child {
+    margin-top: 10%;
+}
+
+.content-view-bloc {
+    position: relative;
+    overflow: hidden;
+    max-height: 630px;
+    overflow-y: scroll;
+    overflow-x: none;
+    padding-bottom: 5px;
+
+    /*border: 1px dotted #F2F2F2;*/
+}
+.view-data-json {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    font-size: 13px;
+    padding:10px;
+    margin-bottom: 10px;
+    border: 1px dashed #BABABA;
+}
+.view-data-json-confirm {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+
+    border-bottom: 1px dashed #F2F2F2;
+}
+.in-view-data-json-confirm {
+    margin-left: 10px;
+}
+
+
+.view-data-json-delete {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 999;
+    /*color: #FFF;*/
+    color: #BABABA;
+}
+.view-data-json-delete:hover {
+    opacity: 0.7;
+    color: red;
+}
+
+
+.view-data-json-edit {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 999;
+    /*color: #FFF;*/
+    color: #BABABA;
+}
+.view-data-json-edit:hover {
+    opacity: 0.7;
+    color: orange;
+}
+
+
+
+.view-data-json-title {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.view-data-json-date {
+    position: relative;
+    text-align: right;
+    font-size: 11px;
+
+}
+
+
+/*
+    CUSTOM BOOTSTARP
+*/
+.nav-tabs {
+    background-color: #F2F2F2;
+    color: #BABABA;
+}
+.nav-tabs > li > a {
+    color: #BABABA;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    /*border-top: 0;*/
+}
+.nav-tabs>li {
+    /*margin-bottom: -2px;*/
+}
+.nav-tabs>li>a {
+    border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+}
+
+.panel {
+    background: transparent;
+}
+
+.panel-body-edit {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin-top: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    /*
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 40px;
+    */
+    background-color: #FFF;
+    z-index: 999;
+    padding: 10px;
+
+    border: 1px dashed #F2F2F2;
+}
+.panel-text-edit {
+    position: relative;
+}
+
+.panel-img {
+    float:left;
+    width:20%;
+    position:relative;
+    overflow:hidden;
+    margin-top:15px;
+}
+.panel-img img {
+    width: 100%;
+}
+.panel-text {
+    float:right;width:75%
+}
+
+
+
+.panel-footer-date{
+    font-size: 11px;
+    text-align: right;
+}
+
+
+
+.add-data-label-input {
+    position: relative;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    color: #BABABA;
+
+    border: 1px dashed #BABABA;
+}
+
+.add-data-label-input:hover {
+    border: 1px dashed orange;
+    color: orange;
+}
