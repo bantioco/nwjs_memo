@@ -22,10 +22,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@antioco.fr:5943/home/git/desktop-app"
-  },
   "author": "BANTIOCO",
   "license": "ISC",
   "dependencies": {
